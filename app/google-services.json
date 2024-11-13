@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "191259582792",
+    "project_id": "buttonmenu-ad40e",
+    "storage_bucket": "buttonmenu-ad40e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191259582792:android:f84ab46403b2569021537d",
+        "android_client_info": {
+          "package_name": "com.example.buttonmenu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHWZedtJjRK_mLhlOwbMMQKOZZdSkH2Is"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

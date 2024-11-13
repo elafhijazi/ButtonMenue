@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginFrag">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="LogIn "
+            android:textSize="50sp"
+            android:layout_marginTop="80dp"
+            />
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="250dp"
+            android:id="@+id/et_email"
+            android:layout_height="75dp"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="250dp"
+                android:id="@+id/et_password"
+                android:layout_height="75dp"/>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+    </LinearLayout>
+
+</FrameLayout>

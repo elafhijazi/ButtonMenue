@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Home"
+        android:icon="@drawable/ichome"
+        android:id="@+id/menu_Home"
+        android:enabled="true"
+    />
+    <item
+        android:title="Dashboard"
+        android:icon="@drawable/icdashboard"
+        android:id="@+id/menu_Dashboard"
+        android:enabled="true"/>
+    <item
+        android:title="LogIn"
+        android:icon="@drawable/iclogin"
+        android:id="@+id/menu_LogIn"
+        android:enabled="true"
+        />
+
+</menu>
