@@ -21,6 +21,7 @@ private Home_Frag homeFrag;
 private DashBoardFrag dashBoardFrag;
 private LoginFrag loginFrag;
 private BottomNavigationView bottomNavigation;
+public static boolean isLogedIn=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,22 +42,23 @@ private BottomNavigationView bottomNavigation;
        getSupportFragmentManager().beginTransaction().replace(R.id.LogIn_Frame,loginFrag).commit();
        //hide other fragments
         DashBoard_frame.setVisibility(View.INVISIBLE);
-        LogIn_frame.setVisibility(View.INVISIBLE);
+        Home_frame.setVisibility(View.INVISIBLE);
+        LogIn_frame.setVisibility(View.VISIBLE);
         //Set up navigation View listener
         bottomNavigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if (item.getItemId()==R.id.menu_Home){
+                if (item.getItemId()==R.id.menu_Home&&isLogedIn){
                     Home_frame.setVisibility(View.VISIBLE);
                     DashBoard_frame.setVisibility(View.INVISIBLE);
                     LogIn_frame.setVisibility(View.INVISIBLE);
                 }
-                if (item.getItemId()==R.id.menu_Dashboard){
+                if (item.getItemId()==R.id.menu_Dashboard&&isLogedIn){
                     Home_frame.setVisibility(View.INVISIBLE);
                     DashBoard_frame.setVisibility(View.VISIBLE);
                     LogIn_frame.setVisibility(View.INVISIBLE);
                 }
-                if (item.getItemId()==R.id.menu_LogIn){
+                if (item.getItemId()==R.id.menu_LogIn&&!isLogedIn){
                     Home_frame.setVisibility(View.INVISIBLE);
                     DashBoard_frame.setVisibility(View.INVISIBLE);
                     LogIn_frame.setVisibility(View.VISIBLE);

@@ -17,5 +17,10 @@
         android:id="@+id/menu_LogIn"
         android:enabled="true"
         />
+    <item
+        android:title="SignUp"
+        android:icon="@drawable/signup"
+        android:id="@+id/menu_SignUp"
+        android:enabled="true"/>
 
 </menu>

@@ -14,8 +14,10 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.Firebase;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class LoginFrag extends Fragment {
 
@@ -68,10 +70,21 @@ public class LoginFrag extends Fragment {
         }
 }
 private void updateUI(){
+        et_email.setText(null);
+        et_password.setText(null);
+        MainActivity.isLogedIn=true;
        MainActivity.LogIn_frame.setVisibility(View.INVISIBLE);
        MainActivity.Home_frame.setVisibility(View.VISIBLE);
-       MainActivity.DashBoard_frame.setVisibility(View.INVISIBLE);
-}
+       MainActivity.DashBoard_frame.setVisibility(View.INVISIBLE);}
 
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        FirebaseUser currentUser=mAuth.getCurrentUser();
+        if (currentUser!=null){
+            updateUI();
+        }
+    }
 }
 
