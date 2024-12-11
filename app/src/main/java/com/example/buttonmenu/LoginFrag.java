@@ -48,7 +48,7 @@ public class LoginFrag extends Fragment {
     private void checkEmailPass(){
         String email,password;
         email=et_email.getText().toString();
-        password=et_email.getText().toString();
+        password=et_password.getText().toString();
         if (!(email.equals("")||password.equals(""))){
             mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
                 @Override
@@ -64,7 +64,6 @@ public class LoginFrag extends Fragment {
             });
 
         }
-
         else {
             Toast.makeText(getActivity(),"please fill in fields",Toast.LENGTH_SHORT).show();
         }
